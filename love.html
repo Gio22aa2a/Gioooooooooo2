@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap');
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Dancing Script', cursive;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+        .heart {
+            font-size: 80px;
+            animation: heartbeat 1s infinite alternate;
+        }
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.3);
+            }
+        }
+        .message {
+            font-size: 36px;
+            margin-top: 20px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Great Vibes', cursive;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 12px 25px;
+            font-size: 22px;
+            background-color: white;
+            color: #ff4d6d;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+            font-family: 'Dancing Script', cursive;
+        }
+        .button:hover {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .flowers {
+            position: absolute;
+            width: 150px;
+            animation: float 5s infinite alternate ease-in-out;
+        }
+        .flower1 { top: 10px; left: 20px; }
+        .flower2 { top: 50px; right: 30px; }
+        .flower3 { bottom: 20px; left: 50px; }
+        .flower4 { bottom: 40px; right: 60px; }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/22/36/flower-1237323_960_720.png" class="flowers flower1" alt="Flowers">
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/22/36/flower-1237323_960_720.png" class="flowers flower2" alt="Flowers">
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/22/36/flower-1237323_960_720.png" class="flowers flower3" alt="Flowers">
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/22/36/flower-1237323_960_720.png" class="flowers flower4" alt="Flowers">
+    <div class="heart">❤️</div>
+    <div class="message">Tricia, you make my world brighter every day! Can I take you out? 🌟</div>
+    <div class="button-container">
+        <button class="button" onclick="askDate(true)">Yes, I'd love to! 💕</button>
+        <button class="button" onclick="askDate(false)">Let me think... 🤔</button>
+    </div>
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        function askDate(answer) {
+            if (answer) {
+                alert("Yay! Can't wait for our date, Tricia! ❤️🥰");
+            } else {
+                alert("No worries, Tricia! I'll be here whenever you're ready. 😊");
+            }
+        }
+    </script>
+</body>
+</html>
